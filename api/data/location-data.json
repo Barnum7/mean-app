@@ -1,0 +1,13 @@
+[{
+	"West Queen West": [{
+		"name": "APT200",
+		"address": "1034 Queen Street West",
+		"description": "Beautiful high end West Queen West bar"
+	}]
+}, {
+	"China Town": [{
+		"name": "People's Eatery",
+		"address": "307 Spadina Avenue",
+		"description": "Breathtaking restaurant in heart of China Town"
+	}]
+}]
