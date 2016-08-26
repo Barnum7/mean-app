@@ -5,15 +5,13 @@ var locationsCtrl = require( '../controllers/locations.controllers.js' );
 
 router
   .route( '/locations' )
-  .get( locationsCtrl.locationsGetAll );
+  .get( locationsCtrl.locationsGetAll )
+  .post( locationsCtrl.locationCreate );
 
 router
   .route( '/locations/:locationId' )
-  .get( locationsCtrl.locationsGetOne );
-
-router
-  .route( '/locations/new' )
-  .post( locationsCtrl.locationCreate );
-
+  .get( locationsCtrl.locationsGetOne )
+  .put( locationsCtrl.locationsUpdateOne )
+  .delete( locationsCtrl.locationsDeleteOne );
 
 module.exports = router;

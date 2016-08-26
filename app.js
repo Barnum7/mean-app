@@ -1,3 +1,4 @@
+require('./api/data/db.js')
 var express = require ( 'express' );
 var app = express();
 var path = require ( 'path' );
@@ -21,5 +22,5 @@ app.use( '/api', routes );
 
 var server = app.listen( app.get( 'port' ), function() {
   var port = server.address().port;
-  console.log( 'Asimov, online on Port ' + port );
+  console.log( 'App online on Port: ' + port );
 });
