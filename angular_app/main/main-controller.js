@@ -1,11 +1,12 @@
 angular.module('myApp').controller('MainController', MainController);
 
-function MainController( $http ) {
+function MainController(LocationFactory) {
   var vm = this;
 
-  $http.get( 'http://localhost:3000/api/locations' ).then( function( response ) {
-    vm.locations = response.data
-  });
+  LocationFactory.getAllLocations().then(function(response) {
+    vm.locations = response;
+    console.log('vm.locations: ', vm.locations);
+  })
 
   vm.name = 'Brian';
 }

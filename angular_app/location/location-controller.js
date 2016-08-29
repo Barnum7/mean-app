@@ -1,12 +1,12 @@
 angular.module('myApp').controller('LocationController',
 LocationController);
 
-function LocationController( $http, $routeParams ) {
+function LocationController( LocationFactory, $routeParams ) {
   var vm = this;
   var id = $routeParams.id;
 
-  $http.get( 'http://localhost:3000/api/locations/' + id ).then( function ( response ) {
-    vm.location = response.data;
-  });
+  LocationFactory.getOneLocation(id).then(function(response) {
+    return vm.location = response;
+  })
 
 }
